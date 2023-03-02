@@ -1,0 +1,17 @@
+{
+  "name": "ts-extra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "keywords": [],
+  "author": "ryan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
