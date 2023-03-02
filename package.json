@@ -1,19 +1,23 @@
 {
   "name": "ts-extra",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vitest",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "test": "vitest run",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "publish": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
   },
   "keywords": [],
   "author": "ryan",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^18.14.2",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5",
